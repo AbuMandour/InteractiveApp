@@ -109,6 +109,10 @@
         <PackageReference Include="Xamarin.Forms" Version="4.7.0.968" />
     </ItemGroup>
     <ItemGroup>
+        <ProjectReference Include="..\..\MvvmWhite\WhiteMvvm\WhiteMvvm.csproj">
+          <Project>{e0ed3682-1449-4006-9386-2cdcaeb7664e}</Project>
+          <Name>WhiteMvvm</Name>
+        </ProjectReference>
         <ProjectReference Include="..\InteractiveApp\InteractiveApp.csproj">
             <Project>{315EC50A-54C7-46D8-8CB0-25E1A1ABE5B2}</Project>
             <Name>InteractiveApp</Name>

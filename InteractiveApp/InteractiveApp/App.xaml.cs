@@ -1,4 +1,8 @@
 ﻿using System;
+using InteractiveApp.ViewModels;
+using WhiteMvvm;
+using WhiteMvvm.Services.Locator;
+using WhiteMvvm.Services.Navigation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -6,13 +10,18 @@ using Xamarin.Forms.Xaml;
 
 namespace InteractiveApp
 {
-    public partial class App : Application
+    public partial class App : WhiteApplication
     {
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            SetHomePage(new NavigationModal()
+            {
+                RootModal = new BasicModal()
+                {
+                    ViewModel = LocatorService.Instance.Resolve<MainViewModel>()
+                }
+            });
         }
 
         protected override void OnStart()

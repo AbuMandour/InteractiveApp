@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<bases:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:InteractiveApp"
+             xmlns:bases="clr-namespace:WhiteMvvm.Bases;assembly=WhiteMvvm"
+             x:Class="InteractiveApp.Views.MainPage">
+
+    <FlexLayout AlignItems="Center" Direction="Column" JustifyContent="SpaceEvenly" >
+        <!-- Place new controls here -->
+        <Button Text="Finger Painting"
+                Command="{Binding GoToFingerPaintingCommand}"/>
+        <Button Text="Local Sound" 
+                Command="{Binding GoToLocalSoundCommand}" />
+        <Button Text="Local Video" 
+                Command="{Binding GoToLocalVideoCommand}" />
+    </FlexLayout>
+
+</bases:BaseContentPage>
