@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using CoreGraphics;
 using Foundation;
+using InteractiveApp.TouchAction;
 using UIKit;
 using Xamarin.Forms;
 
-namespace InteractiveApp.iOS
+namespace InteractiveApp.iOS.Effects
 {
     class TouchRecognizer : UIGestureRecognizer
     {
         Element element;        // Forms element for firing events
         UIView view;            // iOS UIView 
-        InteractiveApp.TouchEffect touchEffect;
+        TouchAction.TouchEffect touchEffect;
         bool capture;
 
         static Dictionary<UIView, TouchRecognizer> viewDictionary = 
@@ -21,7 +22,7 @@ namespace InteractiveApp.iOS
         static Dictionary<long, TouchRecognizer> idToTouchDictionary = 
             new Dictionary<long, TouchRecognizer>();
 
-        public TouchRecognizer(Element element, UIView view, InteractiveApp.TouchEffect touchEffect)
+        public TouchRecognizer(Element element, UIView view, TouchAction.TouchEffect touchEffect)
         {
             this.element = element;
             this.view = view;

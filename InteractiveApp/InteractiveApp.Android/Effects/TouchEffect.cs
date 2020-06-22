@@ -2,20 +2,21 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Android.Views;
-using InteractiveApp.Android;
+using InteractiveApp.TouchAction;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
+using TouchEffect = InteractiveApp.Android.Effects.TouchEffect;
 
 [assembly: ResolutionGroupName("XamarinDocs")]
 [assembly: ExportEffect(typeof(TouchEffect), "TouchEffect")]
 
-namespace InteractiveApp.Android
+namespace InteractiveApp.Android.Effects
 {
     public class TouchEffect : PlatformEffect
     {
         global::Android.Views.View view;
         Element formsElement;
-        InteractiveApp.TouchEffect libTouchEffect;
+        TouchAction.TouchEffect libTouchEffect;
         bool capture;
         Func<double, double> fromPixels;
         int[] twoIntArray = new int[2];
@@ -32,9 +33,9 @@ namespace InteractiveApp.Android
             view = Control ?? Container;
 
             // Get access to the TouchEffect class in the .NET Standard library
-            InteractiveApp.TouchEffect touchEffect = 
-                (InteractiveApp.TouchEffect)Element.Effects.
-                    FirstOrDefault(e => e is InteractiveApp.TouchEffect);
+            TouchAction.TouchEffect touchEffect = 
+                (TouchAction.TouchEffect)Element.Effects.
+                    FirstOrDefault(e => e is TouchAction.TouchEffect);
 
             if (touchEffect != null && view != null)
             {

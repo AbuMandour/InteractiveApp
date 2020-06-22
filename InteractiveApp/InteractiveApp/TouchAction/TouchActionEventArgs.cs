@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace InteractiveApp
+namespace InteractiveApp.TouchAction
 {
     public class TouchActionEventArgs : EventArgs
     {

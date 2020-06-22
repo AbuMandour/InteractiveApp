@@ -5,13 +5,14 @@
              xmlns:bases="clr-namespace:WhiteMvvm.Bases;assembly=WhiteMvvm"
              xmlns:forms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              xmlns:interactiveApp="clr-namespace:InteractiveApp;assembly=InteractiveApp"
+             xmlns:touchAction="clr-namespace:InteractiveApp.TouchAction;assembly=InteractiveApp"
              x:Class="InteractiveApp.Views.FingerPaintingPage">
     <StackLayout BackgroundColor="White">
         <Grid VerticalOptions="FillAndExpand">
             <forms:SKCanvasView x:Name="canvasView"
                                 PaintSurface="OnCanvasViewPaintSurface" />
             <Grid.Effects>
-                <interactiveApp:TouchEffect Capture="True"
+                <touchAction:TouchEffect Capture="True"
                                             TouchAction="OnTouchEffectAction" />
             </Grid.Effects>
         </Grid>

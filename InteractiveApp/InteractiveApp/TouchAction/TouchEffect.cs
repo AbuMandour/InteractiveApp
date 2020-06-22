@@ -1,6 +1,6 @@
 ﻿﻿using Xamarin.Forms;
 
- namespace InteractiveApp
+ namespace InteractiveApp.TouchAction
 {
     public class TouchEffect : RoutingEffect
     {

@@ -1,5 +1,5 @@
 using System.Linq;
-using InteractiveApp.iOS;
+using InteractiveApp.iOS.Effects;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
@@ -7,7 +7,7 @@ using Xamarin.Forms.Platform.iOS;
 [assembly: ResolutionGroupName("XamarinDocs")]
 [assembly: ExportEffect(typeof(TouchEffect), "TouchEffect")]
 
-namespace InteractiveApp.iOS
+namespace InteractiveApp.iOS.Effects
 {
     public class TouchEffect : PlatformEffect
     {
@@ -20,7 +20,7 @@ namespace InteractiveApp.iOS
             view = Control == null ? Container : Control;
 
             // Get access to the TouchEffect class in the .NET Standard library
-            InteractiveApp.TouchEffect effect = (InteractiveApp.TouchEffect)Element.Effects.FirstOrDefault(e => e is InteractiveApp.TouchEffect);
+            TouchAction.TouchEffect effect = (TouchAction.TouchEffect)Element.Effects.FirstOrDefault(e => e is TouchAction.TouchEffect);
 
             if (effect != null && view != null)
             {

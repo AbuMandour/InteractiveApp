@@ -1,4 +1,4 @@
-﻿﻿namespace InteractiveApp
+﻿﻿namespace InteractiveApp.TouchAction
 {
     public enum TouchActionType
     {
