@@ -6,3 +6,5 @@
 /InteractiveApp/InteractiveApp.Android/bin/
 /InteractiveApp/InteractiveApp.Android/obj/
 .idea/
+obj/
+bin/
