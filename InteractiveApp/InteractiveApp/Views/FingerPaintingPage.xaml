@@ -3,12 +3,18 @@
 <bases:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:bases="clr-namespace:WhiteMvvm.Bases;assembly=WhiteMvvm"
+             xmlns:forms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:interactiveApp="clr-namespace:InteractiveApp;assembly=InteractiveApp"
              x:Class="InteractiveApp.Views.FingerPaintingPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Hello, world!"
-                   VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout BackgroundColor="White">
+        <Grid VerticalOptions="FillAndExpand">
+            <forms:SKCanvasView x:Name="canvasView"
+                                PaintSurface="OnCanvasViewPaintSurface" />
+            <Grid.Effects>
+                <interactiveApp:TouchEffect Capture="True"
+                                            TouchAction="OnTouchEffectAction" />
+            </Grid.Effects>
+        </Grid>
+        <Button Text="Clear" Clicked="Button_OnClicked" />
+    </StackLayout>
 </bases:BaseContentPage>
