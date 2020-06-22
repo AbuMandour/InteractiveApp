@@ -1,0 +1,3 @@
+[submodule "MvvmWhite"]
+	path = MvvmWhite
+	url = https://github.com/AbuMandour/MvvmWhite.git
