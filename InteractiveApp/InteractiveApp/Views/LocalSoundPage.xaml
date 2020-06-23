@@ -3,11 +3,11 @@
 <bases:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:bases="clr-namespace:WhiteMvvm.Bases;assembly=WhiteMvvm"
-             x:Class="InteractiveApp.Views.LocalVideoPage">
+             x:Class="InteractiveApp.Views.LocalSoundPage">
     <bases:BaseContentPage.Content>
         <StackLayout>
             <MediaElement VerticalOptions="FillAndExpand" 
-                          Source="ms-appx:///small.webm" 
+                          Source="ms-appx:///file_example_MP3_5MG.mp3" 
                           ShowsPlaybackControls="True" />
         </StackLayout>
     </bases:BaseContentPage.Content>

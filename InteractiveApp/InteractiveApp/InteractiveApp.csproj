@@ -33,6 +33,10 @@
         <SubType>Designer</SubType>
         <Generator></Generator>
       </EmbeddedResource>
+      <EmbeddedResource Update="Views\LocalSoundPage.xaml">
+        <SubType>Designer</SubType>
+        <Generator></Generator>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
@@ -45,6 +49,9 @@
       </Compile>
       <Compile Update="Views\LocalVideoPage.xaml.cs">
         <DependentUpon>LocalVideo.xaml</DependentUpon>
+      </Compile>
+      <Compile Update="Views\LocalSoundPage.xaml.cs">
+        <DependentUpon>LocalSoundPage.xaml</DependentUpon>
       </Compile>
     </ItemGroup>
 </Project>

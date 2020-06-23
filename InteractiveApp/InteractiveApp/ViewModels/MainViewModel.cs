@@ -11,10 +11,17 @@ namespace InteractiveApp.ViewModels
     {
         public ICommand GoToFingerPaintingCommand { get; set; }
         public ICommand GoToLocalVideoCommand { get; set; }
+        public ICommand GoToLocalSoundCommand { get; set; }
         public MainViewModel()
         {
             GoToFingerPaintingCommand = new TaskCommand(OnGoToFingerPainting);
             GoToLocalVideoCommand = new TaskCommand(OnGoToLocalVideo);
+            GoToLocalSoundCommand = new TaskCommand(OnGoToLocalSound);
+        }
+        
+        private Task OnGoToLocalSound()
+        {
+            return NavigationService.NavigateToAsync<LocalSoundViewModel>();
         }
 
         private Task OnGoToLocalVideo()
