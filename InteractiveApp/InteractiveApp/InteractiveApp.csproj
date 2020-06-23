@@ -29,6 +29,10 @@
         <SubType>Designer</SubType>
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
+      <EmbeddedResource Update="Views\LocalVideoPage.xaml">
+        <SubType>Designer</SubType>
+        <Generator></Generator>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
@@ -38,6 +42,9 @@
       <Compile Update="Views\MainPage.xaml.cs">
         <DependentUpon>MainPage.xaml</DependentUpon>
         <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\LocalVideoPage.xaml.cs">
+        <DependentUpon>LocalVideo.xaml</DependentUpon>
       </Compile>
     </ItemGroup>
 </Project>

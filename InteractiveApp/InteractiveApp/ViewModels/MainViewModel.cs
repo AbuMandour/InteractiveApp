@@ -10,10 +10,16 @@ namespace InteractiveApp.ViewModels
     public class MainViewModel : BaseViewModel
     {
         public ICommand GoToFingerPaintingCommand { get; set; }
-
+        public ICommand GoToLocalVideoCommand { get; set; }
         public MainViewModel()
         {
             GoToFingerPaintingCommand = new TaskCommand(OnGoToFingerPainting);
+            GoToLocalVideoCommand = new TaskCommand(OnGoToLocalVideo);
+        }
+
+        private Task OnGoToLocalVideo()
+        {
+            return NavigationService.NavigateToAsync<LocalVideoViewModel>();
         }
 
         private Task OnGoToFingerPainting()

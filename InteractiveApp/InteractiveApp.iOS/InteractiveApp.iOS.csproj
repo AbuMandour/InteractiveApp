@@ -123,5 +123,11 @@
             <Name>InteractiveApp</Name>
         </ProjectReference>
     </ItemGroup>
+    <ItemGroup>
+      <BundleResource Include="Resources\file_example_MP3_5MG.mp3" />
+      <BundleResource Include="Resources\file_example_MP3_700KB.mp3" />
+      <BundleResource Include="Resources\small.mp4" />
+      <BundleResource Include="Resources\small.webm" />
+    </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

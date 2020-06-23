@@ -70,6 +70,10 @@
     <ItemGroup>
         <AndroidResource Include="Resources\layout\Tabbar.axml" />
         <AndroidResource Include="Resources\layout\Toolbar.axml" />
+        <AndroidResource Include="Resources\raw\file_example_MP3_5MG.mp3" />
+        <AndroidResource Include="Resources\raw\file_example_MP3_700KB.mp3" />
+        <AndroidResource Include="Resources\raw\small.mp4" />
+        <AndroidResource Include="Resources\raw\small.webm" />
         <AndroidResource Include="Resources\values\styles.xml" />
         <AndroidResource Include="Resources\values\colors.xml" />
     </ItemGroup>

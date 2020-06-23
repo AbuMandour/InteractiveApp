@@ -14,6 +14,7 @@ namespace InteractiveApp
     {
         public App()
         {
+            Device.SetFlags(new string[] { "MediaElement_Experimental" });
             InitializeComponent();
             SetHomePage(new NavigationModal()
             {
