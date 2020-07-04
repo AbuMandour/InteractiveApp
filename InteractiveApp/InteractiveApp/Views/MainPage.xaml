@@ -13,6 +13,8 @@
                 Command="{Binding GoToLocalSoundCommand}" />
         <Button Text="Local Video" 
                 Command="{Binding GoToLocalVideoCommand}" />
+        <Button Text="Drag and Drop" 
+                Command="{Binding GoToDragAndDropCommand}" />
     </FlexLayout>
 
 </bases:BaseContentPage>

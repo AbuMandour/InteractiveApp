@@ -3,11 +3,12 @@
 <bases:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:bases="clr-namespace:WhiteMvvm.Bases;assembly=WhiteMvvm"
+             xmlns:customControls="clr-namespace:WhiteMvvm.CustomControls;assembly=WhiteMvvm"
              x:Class="InteractiveApp.Views.LocalVideoPage">
     <bases:BaseContentPage.Content>
         <StackLayout>
-            <MediaElement VerticalOptions="FillAndExpand" 
-                          Source="ms-appx:///small.webm" 
+            <MediaElement VerticalOptions="FillAndExpand"
+                          Source="ms-appx:///small.webm"
                           ShowsPlaybackControls="True" />
         </StackLayout>
     </bases:BaseContentPage.Content>

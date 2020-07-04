@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bases:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:bases="clr-namespace:WhiteMvvm.Bases;assembly=WhiteMvvm"
+                       xmlns:customControls="clr-namespace:InteractiveApp.CustomControls;assembly=InteractiveApp"
+                       x:Class="InteractiveApp.Views.DragAndDropPage">
+    <bases:BaseContentPage.Content>
+        <AbsoluteLayout>
+            <customControls:DraggableReceiverView
+                AbsoluteLayout.LayoutFlags="All"
+                DropReceivedCommand="{Binding DropReceivedCommand}"
+                AbsoluteLayout.LayoutBounds=".1,.1,.2,.3"
+                BackgroundColor="BlueViolet" />
+            <customControls:DraggableReceiverView
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds=".5,.1,.2,.3"
+                BackgroundColor="SeaGreen" />
+            <customControls:DraggableReceiverView
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds=".9,.1,.2,.3"
+                BackgroundColor="Yellow" />
+            
+            <customControls:DraggableMoverView
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds=".1,.9,.2,.3"
+                BackgroundColor="BlueViolet" />
+            <customControls:DraggableMoverView
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds=".5,.9,.2,.3"
+                BackgroundColor="SeaGreen" />
+            <customControls:DraggableMoverView
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds=".9,.9,.2,.3"
+                BackgroundColor="Yellow" />
+        </AbsoluteLayout>
+    </bases:BaseContentPage.Content>
+</bases:BaseContentPage>

@@ -12,13 +12,20 @@ namespace InteractiveApp.ViewModels
         public ICommand GoToFingerPaintingCommand { get; set; }
         public ICommand GoToLocalVideoCommand { get; set; }
         public ICommand GoToLocalSoundCommand { get; set; }
+        public ICommand GoToDragAndDropCommand { get; set; }
         public MainViewModel()
         {
             GoToFingerPaintingCommand = new TaskCommand(OnGoToFingerPainting);
             GoToLocalVideoCommand = new TaskCommand(OnGoToLocalVideo);
             GoToLocalSoundCommand = new TaskCommand(OnGoToLocalSound);
+            GoToDragAndDropCommand = new TaskCommand(GoToDragAndDrop);
         }
-        
+
+        private Task GoToDragAndDrop()
+        {
+            return NavigationService.NavigateToAsync<DragAndDropViewModel>();
+        }
+
         private Task OnGoToLocalSound()
         {
             return NavigationService.NavigateToAsync<LocalSoundViewModel>();

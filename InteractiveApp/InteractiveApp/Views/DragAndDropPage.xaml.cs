@@ -10,13 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace InteractiveApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LocalSoundPage : BaseContentPage
+    public partial class DragAndDropPage : BaseContentPage
     {
-        public LocalSoundPage()
+        public DragAndDropPage()
         {
             InitializeComponent();
-            var image = new Image();
-            
         }
     }
 }
