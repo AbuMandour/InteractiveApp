@@ -15,6 +15,8 @@
                 Command="{Binding GoToLocalVideoCommand}" />
         <Button Text="Drag and Drop" 
                 Command="{Binding GoToDragAndDropCommand}" />
+        <Button Text="Shapes" 
+                Command="{Binding GoToShapesCommand}" />
     </FlexLayout>
 
 </bases:BaseContentPage>

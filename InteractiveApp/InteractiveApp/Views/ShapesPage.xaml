@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bases:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:bases="clr-namespace:WhiteMvvm.Bases;assembly=WhiteMvvm"
+             xmlns:customControls="clr-namespace:InteractiveApp.CustomControls;assembly=InteractiveApp"
+             x:Class="InteractiveApp.Views.ShapesPage">
+    <bases:BaseContentPage.Content>
+        <StackLayout>
+            <customControls:DraggableReceiverPath Stroke="Black"
+                  Aspect="Uniform"
+                  StrokeThickness="5"
+                  HeightRequest="500"
+                  Fill="Aqua"
+                  DropReceivedCommand="{Binding DropReceivedCommand }"
+                  Data="M487.655,321.473C386.6,329.163,344.967,257.42,344.967,257.42V173.154l134.888-71.633h150.6l49.581,112.7-8.085,205.158L530.52,752.376l-152.237,98.65L312.377,774.7l130.83-126.824,102.832-163.23,55.338-147.616-7.529-122.8-79.521-41.071-71.12,19.2-7.983,65.071Z">
+                <Path.RenderTransform>
+                    <TranslateTransform X="-311.69" 
+                                        Y="-101.021"/>
+                </Path.RenderTransform>
+            </customControls:DraggableReceiverPath>
+            <StackLayout Orientation="Horizontal" BackgroundColor="Pink" Spacing="50">
+                <customControls:DraggableMoverView HorizontalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50" BackgroundColor="Green" />
+                <customControls:DraggableMoverView HorizontalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50" BackgroundColor="Red" />
+                <customControls:DraggableMoverView HorizontalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50" BackgroundColor="Gold" />
+            </StackLayout>
+        </StackLayout>
+    </bases:BaseContentPage.Content>
+</bases:BaseContentPage>

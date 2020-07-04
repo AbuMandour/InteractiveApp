@@ -41,6 +41,10 @@
         <SubType>Designer</SubType>
         <Generator></Generator>
       </EmbeddedResource>
+      <EmbeddedResource Update="Views\ShapesPage.xaml">
+        <SubType>Designer</SubType>
+        <Generator></Generator>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
@@ -59,6 +63,9 @@
       </Compile>
       <Compile Update="Views\DragAndDropPage.xaml.cs">
         <DependentUpon>DragAndDropPage.xaml</DependentUpon>
+      </Compile>
+      <Compile Update="Views\ShapesPage.xaml.cs">
+        <DependentUpon>ShapesPage.xaml</DependentUpon>
       </Compile>
     </ItemGroup>
 </Project>
